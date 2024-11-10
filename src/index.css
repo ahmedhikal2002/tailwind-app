@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply mx-auto px-10;
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .header {
+    @apply pt-10 px-20 pb-6 flex flex-col items-center gap-5 justify-between md:flex-row sticky top-0 transition-all ease-linear
+     duration-200;
+  }
+  header.header .link {
+    @apply text-white opacity-90 hover:opacity-100 hover:underline transition-opacity duration-300 ease-linear;
+  }
+  .btn {
+    @apply bg-btn hover:bg-btnhover  font-semibold  transition-colors duration-200 ease-linear;
+  }
+  .text {
+    @apply font-normal text-sm;
+  }
+  .my-link {
+    @apply w-fit text-link hover:text-linkhover
+     transition-colors ease-linear duration-200 border-b-2 border-link hover:border-linkhover pb-3;
+  }
+  .icon {
+    @apply w-10 h-10 rounded-full border border-white;
+  }
+}
+body {
+  @apply bg-primary;
+}
+h2 {
+  @apply font-bold text-3xl md:text-4xl leading-[50px];
+}
+h4 {
+  @apply font-bold text-xl;
+}
+
+.grid-sec {
+  @apply grid grid-cols-1 md:grid-cols-2 text-white w-[900px] max-w-full gap-16;
+}
+.grid-sec .box {
+  @apply flex flex-col gap-5 justify-center items-center text-center;
+}
+
+.my-link .arrow {
+  @apply h-5 w-5 animate-move;
+}
+.developers {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9;
+}
+.developers .developer {
+  @apply bg-[#21293c] p-7 rounded-lg shadow-[10px_10px_10px_#151e2a];
+}
+
+input {
+  @apply outline-0;
+}
+.link-active {
+  @apply text-white hover:text-link transition-colors duration-200 ease-linear;
+}
